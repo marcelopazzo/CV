@@ -1,0 +1,152 @@
+% XeLaTeX can use any Mac OS X font. See the setromanfont command below.
+% Input to XeLaTeX is full Unicode, so Unicode characters can be typed directly into the source.
+
+% The next lines tell TeXShop to typeset with xelatex, and to open and save the source with Unicode encoding.
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{article}
+
+\usepackage [brazil]{babel}           % nomes e hifenação em português
+\usepackage{hyperref}
+\usepackage[
+  right=0.8in,
+  left=0.8in,
+  top=0.75in,
+  bottom=0.75in]{geometry}            % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{setspace}
+%\singlespacing
+%\onehalfspacing
+%\doublespacing
+\setstretch{0.8}
+
+% Will Robertson's fontspec.sty can be used to simplify font choices.
+% To experiment, open /Applications/Font Book to examine the fonts provided on Mac OS X,
+% and change "Hoefler Text" to any of these choices.
+
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{Gill Sans}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+\setmonofont[Scale=MatchLowercase]{Gill Sans}
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Set your name here
+\def\name{\textbf{Marcelo} de Brito Soares \textbf{Almeida}}
+
+% Set you CV Link here
+\def\footerlink{\href{https://github.com/marcelopazzo/CV}{\tt github.com/marcelopazzo/CV}}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  %pdfkeywords = {computer science, software, development},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+%\let\oldsubsbsection\subsection
+%\renewcommand{\subsection}{\addtolength{\leftskip}{5mm}\oldsubsection}
+
+\begin{document}
+
+\begin{flushright}
+
+{\huge \name}
+
+\vspace{0.05in}
++ 55 11 94984-9896 / \href{mailto:marcelopazzo@gmail.com}{\tt marcelopazzo@gmail.com} / skype: \tt marcelopazzo
+\vspace{0.01in} \\* 
+Rua Três de Maio, 154 / AP 84 - São Paulo - Brazil
+
+\end{flushright}
+
+\section*{Education}
+\begin{itemize}
+  \item BSc in Computer Science, Federal University of Ceará, 2008
+\end{itemize}
+
+\section*{Certifications}
+\begin{itemize}
+  \item Functional Programming Principles in Scala, École Polytechnique Fédérale de Lausanne - Coursera, November 2013
+\end{itemize}
+
+\section*{Skills}
+\begin{itemize}\setstretch{0.8}
+  \item Ruby on Rails development
+  \item Android development. App available on Google Play: \href{http://marcelopazzo.com/glasgow/}{\tt marcelopazzo.com/glasgow}
+  \item Microsoft Technologies (.NET Framework / Mono with C\#) 
+  \item Programming Languages: Ruby, Java, C\#, Scala, Python, Shell script
+  \item Databases: Oracle, PostgreSQL, MySQL, SQLite, Mongo
+  \item Continuous Integration using TeamCity, Jenkins, Maven, Gradle
+  \item Experience with tests using rspec, capybara, JUnit, mockito, Robolectric
+  \item Advanced english language skills
+\end{itemize}
+
+\section*{Experience}
+{\addtolength{\leftskip}{3.5mm}
+
+\subsection*{Xlung (May/2012 - Present)}
+\begin{itemize}
+\item Analysis, project design and development of xlung website using Ruby on Rails - \href{http://xlung.net}{\tt xlung.net}
+\end{itemize}
+
+\subsection*{Palpiteros - São Paulo (Oct/2013 - May/2014)}
+\begin{itemize}
+\item Development of Android application for a soccer social network (available on Play Store - \href{http://goo.gl/ZCXZCl}{\tt http://goo.gl/ZCXZCl})
+\item Development of application backend (Ruby on Rails)
+\end{itemize}
+
+\subsection*{Instituto Atlântico - Fortaleza / São Paulo (Jun/2012 - Out/2013)}
+\begin{itemize}
+\item Development of Android application for Hewlett Packard
+\item Development of a REST API using ASP.NET MVC 4 (C\#)
+\end{itemize}
+
+\subsection*{GREat - Fortaleza (Mar/2012 - Mai/2012)}
+\begin{itemize}
+\item Analysis and development of Country Adaptations for mobile phone carriers - Android
+\item Development of instrumentation tests for Android
+\end{itemize}
+
+\subsection*{CPQi - Fortaleza (Jan/2009 - Fev/2012)}
+\begin{itemize}
+\item Lead developer on two projects of \href{http://calypso.com}{\tt{Calypso}} system customization
+\item Development of Ruby on Rails application for two european sports betting companies
+\end{itemize}
+
+\subsection*{SecrelNet Internet - Fortaleza (Out/2007 - Jan/2009)}
+\begin{itemize}
+\item Development of services to remote manager resources on servers using Shell script and C\#, running on Mono
+\end{itemize}
+
+\bigskip
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Latest update: \today \\
+    \tt{\footerlink}
+  \end{footnotesize}
+\end{center}
+
+\end{document}  
